@@ -1,0 +1,159 @@
+db.filmy.insertMany([
+{tytul_filmu:'Chlopi',
+gatunek:'Dramat',
+rezyser:'DK Welchman',
+czas_trwania:'1h 56min', 
+ocena:8.2, 
+opis:'Na tle zmieniających się pór roku i sezonowych prac polowych rozgrywają się losy rodziny Borynów i pięknej, tajemniczej Jagny.', 
+aktorzy:['Kamila Urzedowska','Miroslaw Baka', 'Robert Gulaczyk'], 
+data_dodania: new ISODate("2023-09-08T14:10:30Z")},
+
+{tytul_filmu:'Napoleon',
+gatunek:'Dramat',
+rezyser:'Ridley Scott',
+czas_trwania:'2h 38min', 
+ocena:5.9, 
+opis:'Napoleon Bonaparte pnie się po kolejnych szczeblach władzy. Towarzyszy mu przy tym ukochana Józefina.', 
+aktorzy:['Joaquin Phoenix', 'Vanessa Kirby','Tahar Rahim'],
+data_dodania: new ISODate("2023-11-19T12:00:00Z")},
+
+{tytul_filmu:'Zabojca',
+gatunek:'Kryminal',
+rezyser:'David Fincher',
+czas_trwania:'1h 59min', 
+ocena:6.2, 
+opis:'Niecelny strzał sprawia, że zabójca musi stoczyć walkę ze zleceniodawcami i z samym sobą, goniąc za zemstą, w której - jak twierdzi - nie ma nic osobistego.', 
+aktorzy:['Michael Fassbender', 'Tilda Swinton'], 
+data_dodania: new ISODate("2023-09-03T12:00:00Z")},
+
+{tytul_filmu:'Oppenheimer',
+gatunek:'Dramat',
+rezyser:'Christopher Nolan',
+czas_trwania:'3h', 
+ocena:8.1, 
+opis:'Historia amerykańskiego naukowca J. Roberta Oppenheimera i jego roli w stworzeniu bomby atomowej.', 
+aktorzy:['Cillian Murphy','Emily Blunt'],
+data_dodania: new ISODate("2023-07-19T00:00:00Z")},
+
+{tytul_filmu:'65',
+gatunek:'Sci-Fi',
+rezyser:'Scott Beck',czas_trwania:'1h 33min', 
+ocena:4.7, 
+opis:'Astronauta rozbija się na nieznanej planecie, która okazuje się Ziemią tylko... 65 milionów lat temu.', 
+aktorzy:['Adam Driver','Ariana Greenblatt','Chloe Coleman'], 
+data_dodania: new ISODate("2023-03-02T00:00:00Z")},
+
+{tytul_filmu:'Noc dziekczynienia',
+gatunek:'Horror',
+rezyser:'Eli Roth',
+czas_trwania:'1h 47min', 
+ocena:6.4, 
+opis:'Mieszkańcy miasta Plymouth, kolebki Święta Dziękczynienia, porzucają tradycyjne, rodzinne zgromadzenia, by celebrować kolejne święto – konsumpcyjny Black Friday. Żądza posiadania doprowadza do tragicznych w skutkach zamieszek, które stają się viralowym hitem w sieci.', 
+aktorzy:['Patrick Dempsey','Addison Rae'],
+data_dodania: new ISODate("2023-11-16T00:00:00Z")},
+
+{tytul_filmu:'Czas krwawego ksiezyca',
+gatunek:'Kryminał',
+rezyser:'Martin Scorsese',
+czas_trwania:'3h 26min', 
+ocena:7.3, 
+opis:'Gdy na terenie zamieszkiwanym przez Osagów odkryta zostaje ropa naftowa, członkowie plemienia zaczynają ginąć lub umierać z nieznanych przyczyn. Sprawa ta przykuwa uwagę FBI i J. Edgara Hoovera.', 
+aktorzy:['Leonardo DiCaprio','Robert De Niro','Lily Gladstone'], 
+data_dodania: new ISODate("2023-05-20T12:15:00Z")},
+
+{tytul_filmu:'Służące',
+gatunek:'Dramat',
+rezyser:'Tate Taylor',
+czas_trwania:'2h 26min',
+ocena:8.1, 
+opis:'Lata 60. XX wieku. Początkująca dziennikarka spisuje historie czarnoskórych służących wywołując skandal wśród wyższych sfer.', 
+aktorzy:['Emma Stone','Viola Davis','Bryce Dallas Howard'],
+data_dodania: new ISODate("2011-08-09T08:15:30Z")},  
+
+{tytul_filmu:'Na skraju jutra',
+gatunek:'Sci-Fi',
+rezyser:'Doug Liman',
+czas_trwania:'1h 53min',
+ocena:7.4, 
+opis:'Walczący z agresywną rasą obcych żołnierz zostaje zamknięty w pętli czasu i skazany na ciągłe przeżywanie tego samego dnia. On i legendarna bohaterka wojenna łączą siły, aby powstrzymać agresorów.', 
+aktorzy:['Tom Cruise','Emily Blunt'],
+data_dodania: new ISODate("2023-09-08T09:10:30Z")},  
+
+{tytul_filmu:'Barbie',
+gatunek:'Komedia',
+rezyser:'Greta Gerwig',
+czas_trwania:'1h 54min',
+ocena:6.7, 
+opis:'Barbie, która żyje w idealnym bajkowym świecie przechodzi kryzys egzystencjalny.', 
+aktorzy:['Margot Robbie','Ryan Gosling'],
+data_dodania: new ISODate("2023-07-19T18:10:30Z")},  
+])
+
+db.klienci.insertMany([
+{
+imie:'Igor',
+nazwisko:'Szalas',
+adres:'Bedzin, 12-421, Tajemnicza 12',
+telefon:123456789,
+data_rejestracji: new ISODate("2003-09-12T18:13:35Z")
+},
+{
+imie:'Jakub',
+nazwisko:'Hasikowski',
+adres:'Cieletniki, 12-234, Robotnicza 2',
+telefon:987654321,
+data_rejestracji: new ISODate("2013-09-22T11:25:00Z")
+},
+{
+imie:'Kacper',
+nazwisko:'Malachowski',
+adres:'Dabrowa Gornicza, 45-291, Pobozna 34/2',
+telefon:456712389,
+data_rejestracji: new ISODate("2015-05-01T05:00:00Z")
+},
+{
+imie:'Tomek',
+nazwisko:'Makuszewski',
+adres:'Zawiercie, 32-304, Argentynska 2',
+telefon:527347593,
+data_rejestracji: new ISODate("2001-01-01T16:00:12Z")
+},
+{
+imie:'Oskar',
+nazwisko:'Trapczynski',
+adres:'Katowice, 53-123, Muzyczna 12',
+telefon:123457234,
+data_rejestracji: new ISODate("2023-02-11T12:43:00Z")
+}
+])
+
+db.wypozyczenia.insertMany([
+{
+dane_klienta:'Igor Szalas',
+tytul_filmu:'Zabojca',
+data_wypozyczenia: new ISODate("2023-02-11T12:43:00Z"),
+data_planowanego_zwrotu: new ISODate("2023-02-11T12:43:00Z"),
+data_faktycznego_zwrotu: new ISODate("2023-02-18T12:43:00Z")
+},
+{
+dane_klienta:'Jakub Hasikowski',
+tytul_filmu:'Czas krwawego ksiezyca',
+data_wypozyczenia: new ISODate("2023-02-11T12:43:00Z"),
+data_planowanego_zwrotu: new ISODate("2023-04-01T12:43:00Z"),
+data_faktycznego_zwrotu: new ISODate("2023-04-09T12:43:00Z")
+},
+{
+dane_klienta:'Oskar Trapczynski',
+tytul_filmu:'Czas krwawego ksiezyca',
+data_wypozyczenia: new ISODate("2023-02-11T12:43:00Z"),
+data_planowanego_zwrotu: new ISODate("2023-05-12T12:43:00Z"),
+data_faktycznego_zwrotu: new ISODate("2023-05-15T12:43:00Z")
+},
+{
+dane_klienta:'Kacper Malachowski',
+tytul_filmu:'Barbie',
+data_wypozyczenia: new ISODate("2023-01-01T12:43:00Z"),
+data_planowanego_zwrotu: new ISODate("2023-01-04T12:43:00Z"),
+data_faktycznego_zwrotu: new ISODate("2023-01-05T12:43:00Z")
+},
+])
