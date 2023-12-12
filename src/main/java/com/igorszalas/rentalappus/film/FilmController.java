@@ -34,7 +34,7 @@ public class FilmController {
 
     @GetMapping
     public List<Film> getAllFilms(@RequestParam(required = false) String sort) {
-        if (!sort.isEmpty() && !sort.isEmpty()) {
+        if (sort != null && !sort.isEmpty() && !sort.isEmpty()) {
             Sort sortValue = Utils.getSort(sort);
             return filmService.displayAllFilms(sortValue);
         }
