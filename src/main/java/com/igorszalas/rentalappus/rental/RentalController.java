@@ -36,13 +36,16 @@ public class RentalController {
         return rentalService.displayAllRentals();
     }
 
-    @PostMapping("/rentals")
+    @PostMapping(value = "/rentals")
     public ResponseEntity<List<Rental>> createRent(@RequestBody(required = true) Rental rental) {
         List<Rental> rentals = this.rentalService.displayAllRentals();
 
         boolean isBorrowed = false;
         for (int i = 0; i < rentals.size(); i++) {
             Rental rent = rentals.get(i);
+            if (rental.getFilmTitle() == null || rent.getFilmTitle() == null) {
+                continue;
+            }
             if (rent.getFilmTitle().equals(rental.getFilmTitle())) {
                 isBorrowed = true;
             }
