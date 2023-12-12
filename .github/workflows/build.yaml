@@ -8,8 +8,21 @@ on:
     branches:
       - "master"
 jobs:
+  test:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up JDK 21 for x64
+        uses: actions/setup-java@v3
+        with:
+          java-version: "21"
+          distribution: "sapmachine"
+          architecture: x64
+      - name: Run the Maven verify phase
+        run: mvn --batch-mode --update-snapshots verify
   publish:
     name: publish
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -32,7 +45,7 @@ jobs:
         uses: docker/metadata-action@v5.3.0
         with:
           images: |
-            ghcr.io/${{ github.repository_owner }}/frontend
+            ghcr.io/${{ github.repository_owner }}/backend
           tags: |
             type=schedule
             type=sha
