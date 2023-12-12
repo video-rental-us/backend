@@ -8,6 +8,9 @@ import org.springframework.data.domain.Sort.Order;
 
 public class Utils {
   public static Sort getSort(String sort) {
+    if (sort == null || sort.isEmpty() || sort.isBlank()) {
+      return Sort.unsorted();
+    }
     String[] sortFields = sort.split(",");
 
     List<Order> orders = new ArrayList<>();
