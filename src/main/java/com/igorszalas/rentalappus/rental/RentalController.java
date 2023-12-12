@@ -7,6 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -54,6 +55,17 @@ public class RentalController {
             List<Rental> rents = new ArrayList<Rental>();
             rents.add(rental);
             return new ResponseEntity<>(rents, HttpStatus.OK);
+        }
+    }
+
+    @DeleteMapping(value = "/deleteRent")
+    public ResponseEntity<HttpStatus> deleteRent(@RequestParam(required = true) String rentId){
+        try {
+            rentalRepository.deleteById(rentId);
+            System.out.println(rentId + "is deleted!");
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception exception) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
